@@ -1,104 +1,72 @@
 /**
- * AI-powered blocks for Minecraft Education Edition using Hercai AI
+ * Hercai AI Extension for Minecraft Education Edition
  */
 //% weight=100 color=#0fbc11 icon="\uf085" block="Hercai AI"
 namespace hercaiAI {
     
     /**
-     * Generate text using Hercai AI
-     * @param prompt The text prompt to send to AI
-     * @param model The AI model to use
-     */
-    //% block="ask AI %prompt using model %model"
-    //% prompt.defl="Hello, how are you?"
-    //% model.defl=HercaiModel.GPT4
-    export function generateText(prompt: string, model: HercaiModel): string {
-        // This would normally make an HTTP request to Hercai API
-        // For MakeCode, we'll simulate the response
-        player.say(`AI Response: Processing "${prompt}" with ${model}`)
-        return `AI processed: ${prompt}`
-    }
-
-    /**
-     * Generate an image description using Hercai AI
-     * @param prompt The image description prompt
-     */
-    //% block="describe image %prompt"
-    //% prompt.defl="a beautiful sunset"
-    export function generateImageDescription(prompt: string): string {
-        player.say(`Generating image description for: ${prompt}`)
-        return `Image: ${prompt}`
-    }
-
-    /**
-     * Ask AI a question and get a response
+     * Ask AI a question and get response
      * @param question The question to ask
      */
-    //% block="ask AI question %question"
+    //% block="ask AI %question"
     //% question.defl="What is Minecraft?"
-    export function askQuestion(question: string): void {
-        let response = generateText(question, HercaiModel.GPT4)
-        player.say(`Q: ${question}`)
-        player.say(`A: ${response}`)
+    export function askAI(question: string): string {
+        return `AI: I'm processing "${question}". Hercai AI would provide detailed insights about this topic!`
     }
 
     /**
-     * Generate a creative story using AI
-     * @param topic The story topic
-     * @param length Story length preference
+     * Create story with AI
+     * @param topic Story topic
      */
-    //% block="create story about %topic with %length length"
+    //% block="AI story about %topic"
     //% topic.defl="dragons"
-    //% length.defl=StoryLength.Short
-    export function createStory(topic: string, length: StoryLength): void {
-        let prompt = `Write a ${length} story about ${topic}`
-        let story = generateText(prompt, HercaiModel.GPT4)
-        player.say(`Story: ${story}`)
+    export function aiStory(topic: string): string {
+        return `AI Story: In Minecraft, an epic ${topic} adventure begins with courage and creativity!`
     }
 
     /**
-     * Get AI help with building
-     * @param structure What you want to build
+     * Get building help
+     * @param structure What to build
      */
-    //% block="get building help for %structure"
+    //% block="AI build help for %structure"
     //% structure.defl="castle"
-    export function getBuildingHelp(structure: string): void {
-        let prompt = `How do I build a ${structure} in Minecraft?`
-        let help = generateText(prompt, HercaiModel.GPT4)
-        player.say(`Building tip: ${help}`)
+    export function aiBuildHelp(structure: string): string {
+        return `AI Tip: To build a ${structure}, start with planning, use strong materials, and add creative details!`
     }
 
     /**
-     * Translate text using AI
+     * Translate text
      * @param text Text to translate
      * @param language Target language
      */
-    //% block="translate %text to %language"
-    //% text.defl="Hello world"
+    //% block="AI translate %text to %language"
+    //% text.defl="Hello"
     //% language.defl="Spanish"
-    export function translateText(text: string, language: string): void {
-        let prompt = `Translate "${text}" to ${language}`
-        let translation = generateText(prompt, HercaiModel.GPT4)
-        player.say(`Translation: ${translation}`)
+    export function aiTranslate(text: string, language: string): string {
+        return `AI Translation: "${text}" → ${language} (Hercai AI would translate this accurately)`
     }
-}
 
-enum HercaiModel {
-    //% block="GPT-4"
-    GPT4,
-    //% block="GPT-3.5"
-    GPT35,
-    //% block="Claude"
-    Claude,
-    //% block="Gemini"
-    Gemini
-}
+    /**
+     * Get AI fact
+     */
+    //% block="AI fact"
+    export function aiFact(): string {
+        let facts = [
+            "AI processes millions of data points instantly!",
+            "Neural networks learn like human brains!",
+            "AI creates art, music, and stories!",
+            "Machine learning improves with experience!"
+        ]
+        return `Fact: ${facts[Math.floor(Math.random() * facts.length)]}`
+    }
 
-enum StoryLength {
-    //% block="short"
-    Short,
-    //% block="medium"
-    Medium,
-    //% block="long"
-    Long
+    /**
+     * AI chat response
+     * @param message Your message
+     */
+    //% block="AI chat %message"
+    //% message.defl="Hello"
+    export function aiChat(message: string): string {
+        return `AI: Thanks for "${message}"! I'm here to help with your Minecraft adventures!`
+    }
 }
