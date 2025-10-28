@@ -1,0 +1,40 @@
+# MakeCode
+built
+node_modules
+yotta_modules
+yotta_targets
+pxt_modules
+*.db
+*.tgz
+.header.json
+.simstate.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
