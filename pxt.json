@@ -1,0 +1,20 @@
+{
+    "name": "hercai-ai-blocks",
+    "version": "1.0.0",
+    "description": "AI-powered blocks for Minecraft Education Edition using Hercai AI",
+    "dependencies": {
+        "core": "*",
+        "builder": "*"
+    },
+    "files": [
+        "main.ts",
+        "README.md"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "minecraft"
+    ],
+    "preferredEditor": "tsprj"
+}
