@@ -1,7 +1,7 @@
 {
-    "name": "hercai-ai-blocks",
-    "version": "1.0.2",
-    "description": "AI-powered blocks for Minecraft Education Edition using Hercai AI",
+    "name": "EducationAI",
+    "version": "1.1.0",
+    "description": "AI-powered blocks for Minecraft Education Edition",
     "license": "MIT",
     "dependencies": {
         "core": "*",
