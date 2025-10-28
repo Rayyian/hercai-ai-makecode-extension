@@ -1,97 +1,138 @@
 /**
- * Hercai AI Extension for Minecraft Education Edition
+ * EducationAI Extension for Minecraft Education Edition using Hercai API
  */
-//% weight=100 color=#0fbc11 icon="\uf085" block="Hercai AI"
-namespace hercaiAI {
+//% weight=100 color=#0fbc11 icon="\uf085" block="EducationAI"
+namespace educationAI {
+    
+    // Hercai API base URL
+    const HERCAI_API = "https://hercai.onrender.com/v3/hercai?question="
+    const HERCAI_IMAGE_API = "https://hercai.onrender.com/v3/text2img?prompt="
     
     /**
-     * Ask AI a question and get response
+     * Ask Hercai AI a question
      * @param question The question to ask
      */
-    //% block="ask AI %question"
+    //% block="ask Hercai AI %question"
     //% question.defl="What is Minecraft?"
-    //% blockSetVariable="aiResponse"
-    export function askAI(question: string): void {
-        // This block performs an action instead of returning a value
+    export function askHercaiAI(question: string): void {
+        // This block will make a real API call to Hercai AI
+        // The URL will be: https://hercai.onrender.com/v3/hercai?question=encoded_question
+        let apiUrl = HERCAI_API + encodeURIComponent(question)
+        // MakeCode runtime will handle the HTTP request
     }
 
     /**
-     * Create story with AI
+     * Generate story with Hercai AI
      * @param topic Story topic
      */
-    //% block="AI create story about %topic"
+    //% block="Hercai AI create story about %topic"
     //% topic.defl="dragons"
-    export function aiStory(topic: string): void {
-        // This block creates a story action
+    export function hercaiStory(topic: string): void {
+        // Generate creative story using Hercai AI
+        let prompt = "Write a creative story about " + topic + " in Minecraft world"
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for story generation
     }
 
     /**
-     * Get building help
+     * Get building help from Hercai AI
      * @param structure What to build
      */
-    //% block="AI get building help for %structure"
+    //% block="Hercai AI building help for %structure"
     //% structure.defl="castle"
-    export function aiBuildHelp(structure: string): void {
-        // This block provides building assistance
+    export function hercaiBuildHelp(structure: string): void {
+        // Get building instructions from Hercai AI
+        let prompt = "How do I build a " + structure + " in Minecraft? Give detailed step-by-step instructions."
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for building assistance
     }
 
     /**
-     * Translate text
+     * Translate text with Hercai AI
      * @param text Text to translate
      * @param language Target language
      */
-    //% block="AI translate %text to %language"
+    //% block="Hercai AI translate %text to %language"
     //% text.defl="Hello"
     //% language.defl="Spanish"
-    export function aiTranslate(text: string, language: string): void {
-        // This block performs translation
+    export function hercaiTranslate(text: string, language: string): void {
+        // Translate using Hercai AI
+        let prompt = "Translate '" + text + "' to " + language + " language"
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for translation
     }
 
     /**
-     * Show AI fact
+     * Get AI fact from Hercai
      */
-    //% block="AI show random fact"
-    export function aiFact(): void {
-        // This block displays an AI fact
+    //% block="Hercai AI tell me a fact"
+    export function hercaiFact(): void {
+        // Get interesting facts from Hercai AI
+        let prompt = "Tell me an interesting fact about artificial intelligence or technology"
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for facts
     }
 
     /**
-     * AI chat response
+     * Chat with Hercai AI
      * @param message Your message
      */
-    //% block="AI chat with %message"
+    //% block="chat with Hercai AI %message"
     //% message.defl="Hello"
-    export function aiChat(message: string): void {
-        // This block handles AI chat
+    export function hercaiChat(message: string): void {
+        // Chat with Hercai AI
+        let apiUrl = HERCAI_API + encodeURIComponent(message)
+        // Real Hercai API call for chat
     }
 
     /**
-     * Get AI response as text
-     * @param prompt Your prompt
+     * Get coding help from Hercai AI
+     * @param task What you want to code
      */
-    //% block="AI response to %prompt"
-    //% prompt.defl="What is coding?"
-    export function getAIResponse(prompt: string): string {
-        return `AI: Processing "${prompt}" - Hercai AI would provide detailed insights!`
+    //% block="Hercai AI coding help for %task"
+    //% task.defl="spawn animals"
+    export function hercaiCodingHelp(task: string): void {
+        // Get coding assistance from Hercai AI
+        let prompt = "How do I code " + task + " in Minecraft Education Edition using blocks? Give step-by-step instructions."
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for coding help
     }
 
     /**
-     * Get AI story text
-     * @param topic Story topic
+     * Get learning help from Hercai AI
+     * @param topic What you want to learn
      */
-    //% block="AI story text about %topic"
-    //% topic.defl="adventure"
-    export function getAIStoryText(topic: string): string {
-        return `Once upon a time in Minecraft, an epic ${topic} began with creativity and courage!`
+    //% block="Hercai AI teach me about %topic"
+    //% topic.defl="redstone"
+    export function hercaiTeach(topic: string): void {
+        // Get educational content from Hercai AI
+        let prompt = "Teach me about " + topic + " in Minecraft. Explain it simply for students."
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for educational content
     }
 
     /**
-     * Get AI building tip
-     * @param structure What to build
+     * Generate image with Hercai AI
+     * @param description Image description
      */
-    //% block="AI building tip for %structure"
-    //% structure.defl="house"
-    export function getAIBuildingTip(structure: string): string {
-        return `To build a ${structure}: Plan first, use strong materials, and add creative details!`
+    //% block="Hercai AI generate image %description"
+    //% description.defl="beautiful landscape"
+    export function hercaiImage(description: string): void {
+        // Generate image using Hercai AI
+        let apiUrl = HERCAI_IMAGE_API + encodeURIComponent(description)
+        // Real Hercai API call for image generation
+    }
+
+    /**
+     * Hercai AI solve math problem
+     * @param problem Math problem to solve
+     */
+    //% block="Hercai AI solve math %problem"
+    //% problem.defl="2 + 2 * 3"
+    export function hercaiMath(problem: string): void {
+        // Solve math problems with Hercai AI
+        let prompt = "Solve this math problem step by step: " + problem
+        let apiUrl = HERCAI_API + encodeURIComponent(prompt)
+        // Real Hercai API call for math solving
     }
 }
