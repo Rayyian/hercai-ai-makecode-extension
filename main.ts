@@ -1,4 +1,7 @@
-//% weight=100 color=#0fbc11 icon="\uf085"
+/**
+ * AI-powered blocks for Minecraft Education Edition using Hercai AI
+ */
+//% weight=100 color=#0fbc11 icon="\uf085" block="Hercai AI"
 namespace hercaiAI {
     
     /**

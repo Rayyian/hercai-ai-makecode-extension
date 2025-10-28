@@ -1,0 +1,22 @@
+{
+    "hercaiAI.generateText": "Generate text using Hercai AI",
+    "hercaiAI.generateText|param|prompt": "The text prompt to send to AI",
+    "hercaiAI.generateText|param|model": "The AI model to use",
+    "hercaiAI.generateImageDescription": "Generate an image description using Hercai AI",
+    "hercaiAI.generateImageDescription|param|prompt": "The image description prompt",
+    "hercaiAI.askQuestion": "Ask AI a question and get a response",
+    "hercaiAI.askQuestion|param|question": "The question to ask",
+    "hercaiAI.createStory": "Generate a creative story using AI",
+    "hercaiAI.createStory|param|topic": "The story topic",
+    "hercaiAI.createStory|param|length": "Story length preference",
+    "hercaiAI.getBuildingHelp": "Get AI help with building",
+    "hercaiAI.getBuildingHelp|param|structure": "What you want to build",
+    "hercaiAI.translateText": "Translate text using AI",
+    "hercaiAI.translateText|param|text": "Text to translate",
+    "hercaiAI.translateText|param|language": "Target language",
+    "hercaiAI.getCodingHelp": "Generate code suggestions using AI",
+    "hercaiAI.getCodingHelp|param|task": "What you want to code",
+    "hercaiAI.getAIFact": "Generate random AI facts",
+    "hercaiAI.aiChatResponse": "Create AI-powered chat responses",
+    "hercaiAI.aiChatResponse|param|message": "The chat message to respond to"
+}

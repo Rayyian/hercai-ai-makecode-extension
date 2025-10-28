@@ -1,0 +1,19 @@
+{
+    "hercaiAI.generateText|block": "ask AI %prompt using model %model",
+    "hercaiAI.generateImageDescription|block": "describe image %prompt",
+    "hercaiAI.askQuestion|block": "ask AI question %question",
+    "hercaiAI.createStory|block": "create story about %topic with %length length",
+    "hercaiAI.getBuildingHelp|block": "get building help for %structure",
+    "hercaiAI.translateText|block": "translate %text to %language",
+    "hercaiAI.getCodingHelp|block": "get coding help for %task",
+    "hercaiAI.getAIFact|block": "tell me an AI fact",
+    "hercaiAI.aiChatResponse|block": "AI chat response to %message",
+    "HercaiModel.GPT4|block": "GPT-4",
+    "HercaiModel.GPT35|block": "GPT-3.5",
+    "HercaiModel.Claude|block": "Claude",
+    "HercaiModel.Gemini|block": "Gemini",
+    "StoryLength.Short|block": "short",
+    "StoryLength.Medium|block": "medium",
+    "StoryLength.Long|block": "long",
+    "{id:category}hercaiAI": "Hercai AI"
+}

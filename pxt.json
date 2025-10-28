@@ -2,13 +2,17 @@
     "name": "hercai-ai-blocks",
     "version": "1.0.0",
     "description": "AI-powered blocks for Minecraft Education Edition using Hercai AI",
+    "license": "MIT",
+    "author": "MakeCode Community",
     "dependencies": {
         "core": "*",
         "builder": "*"
     },
     "files": [
         "main.ts",
-        "README.md"
+        "README.md",
+        "_locales/hercai-ai-blocks-jsdoc-strings.json",
+        "_locales/hercai-ai-blocks-strings.json"
     ],
     "testFiles": [
         "test.ts"
@@ -16,5 +20,7 @@
     "supportedTargets": [
         "minecraft"
     ],
-    "preferredEditor": "tsprj"
+    "preferredEditor": "tsprj",
+    "public": true,
+    "installedVersion": "workspace:*"
 }
