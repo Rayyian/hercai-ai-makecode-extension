@@ -1,20 +1,25 @@
 {
-    "name": "EducationAI",
-    "version": "2.0.0",
-    "description": "AI-powered blocks for Minecraft Education Edition",
+    "name": "educationai",
+    "version": "2.0.1",
+    "description": "EducationAI - Hercai AI blocks for Minecraft Education Edition",
+    "author": "MakeCode Community",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "builder": "*",
-        "network": "*"
+        "builder": "*"
     },
     "files": [
         "main.ts",
         "README.md"
     ],
+    "testFiles": [
+        "test.ts"
+    ],
     "supportedTargets": [
         "minecraft"
     ],
     "preferredEditor": "tsprj",
-    "public": true
+    "public": true,
+    "yotta": {},
+    "installedVersion": "workspace:*"
 }

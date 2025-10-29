@@ -1,8 +1,8 @@
 /**
  * EducationAI Extension for Minecraft Education Edition using Hercai API
  */
-//% weight=100 color=#0fbc11 icon="\uf085" block="EducationAI"
-namespace educationAI {
+//% weight=100 color=#0fbc11 icon="\uf085"
+namespace EducationAI {
     
     // Hercai API base URL
     const HERCAI_API = "https://hercai.onrender.com/v3/hercai?question="
