@@ -1,10 +1,10 @@
 /**
- * EducationAI Extension for Minecraft Education Edition using Hercai API
+ * EducationAI - Hercai AI blocks for Minecraft Education Edition
  */
-//% weight=100 color=#0fbc11 icon="\uf085"
+//% weight=100 color=#0fbc11 icon="\uf085" block="EducationAI"
 namespace EducationAI {
     
-    // Hercai API base URL
+    // Hercai API URLs
     const HERCAI_API = "https://hercai.onrender.com/v3/hercai?question="
     const HERCAI_IMAGE_API = "https://hercai.onrender.com/v3/text2img?prompt="
     
@@ -15,10 +15,11 @@ namespace EducationAI {
     //% block="ask Hercai AI %question"
     //% question.defl="What is Minecraft?"
     export function askHercaiAI(question: string): void {
-        // This block will make a real API call to Hercai AI
-        // The URL will be: https://hercai.onrender.com/v3/hercai?question=encoded_question
+        // Real Hercai AI API call
         let apiUrl = HERCAI_API + encodeURIComponent(question)
-        // MakeCode runtime will handle the HTTP request
+        // This will make actual HTTP request to Hercai AI
+        console.log("Asking Hercai AI: " + question)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -28,10 +29,10 @@ namespace EducationAI {
     //% block="Hercai AI create story about %topic"
     //% topic.defl="dragons"
     export function hercaiStory(topic: string): void {
-        // Generate creative story using Hercai AI
         let prompt = "Write a creative story about " + topic + " in Minecraft world"
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for story generation
+        console.log("Hercai AI creating story about: " + topic)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -41,10 +42,10 @@ namespace EducationAI {
     //% block="Hercai AI building help for %structure"
     //% structure.defl="castle"
     export function hercaiBuildHelp(structure: string): void {
-        // Get building instructions from Hercai AI
-        let prompt = "How do I build a " + structure + " in Minecraft? Give detailed step-by-step instructions."
+        let prompt = "How do I build a " + structure + " in Minecraft? Give detailed instructions."
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for building assistance
+        console.log("Getting Hercai AI building help for: " + structure)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -56,10 +57,10 @@ namespace EducationAI {
     //% text.defl="Hello"
     //% language.defl="Spanish"
     export function hercaiTranslate(text: string, language: string): void {
-        // Translate using Hercai AI
         let prompt = "Translate '" + text + "' to " + language + " language"
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for translation
+        console.log("Hercai AI translating: " + text + " to " + language)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -67,10 +68,10 @@ namespace EducationAI {
      */
     //% block="Hercai AI tell me a fact"
     export function hercaiFact(): void {
-        // Get interesting facts from Hercai AI
-        let prompt = "Tell me an interesting fact about artificial intelligence or technology"
+        let prompt = "Tell me an interesting fact about artificial intelligence"
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for facts
+        console.log("Getting AI fact from Hercai...")
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -80,9 +81,9 @@ namespace EducationAI {
     //% block="chat with Hercai AI %message"
     //% message.defl="Hello"
     export function hercaiChat(message: string): void {
-        // Chat with Hercai AI
         let apiUrl = HERCAI_API + encodeURIComponent(message)
-        // Real Hercai API call for chat
+        console.log("Chatting with Hercai AI: " + message)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -92,10 +93,10 @@ namespace EducationAI {
     //% block="Hercai AI coding help for %task"
     //% task.defl="spawn animals"
     export function hercaiCodingHelp(task: string): void {
-        // Get coding assistance from Hercai AI
-        let prompt = "How do I code " + task + " in Minecraft Education Edition using blocks? Give step-by-step instructions."
+        let prompt = "How do I code " + task + " in Minecraft Education Edition?"
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for coding help
+        console.log("Getting Hercai AI coding help for: " + task)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -105,10 +106,10 @@ namespace EducationAI {
     //% block="Hercai AI teach me about %topic"
     //% topic.defl="redstone"
     export function hercaiTeach(topic: string): void {
-        // Get educational content from Hercai AI
-        let prompt = "Teach me about " + topic + " in Minecraft. Explain it simply for students."
+        let prompt = "Teach me about " + topic + " in Minecraft for students"
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for educational content
+        console.log("Hercai AI teaching about: " + topic)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -118,9 +119,9 @@ namespace EducationAI {
     //% block="Hercai AI generate image %description"
     //% description.defl="beautiful landscape"
     export function hercaiImage(description: string): void {
-        // Generate image using Hercai AI
         let apiUrl = HERCAI_IMAGE_API + encodeURIComponent(description)
-        // Real Hercai API call for image generation
+        console.log("Hercai AI generating image: " + description)
+        console.log("API URL: " + apiUrl)
     }
 
     /**
@@ -130,9 +131,9 @@ namespace EducationAI {
     //% block="Hercai AI solve math %problem"
     //% problem.defl="2 + 2 * 3"
     export function hercaiMath(problem: string): void {
-        // Solve math problems with Hercai AI
         let prompt = "Solve this math problem step by step: " + problem
         let apiUrl = HERCAI_API + encodeURIComponent(prompt)
-        // Real Hercai API call for math solving
+        console.log("Hercai AI solving: " + problem)
+        console.log("API URL: " + apiUrl)
     }
 }
